@@ -9,7 +9,7 @@ server:
 mybatis-plus:
   configuration:
     #控制台打印
-    #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
     #驼峰转下划线
     map-underscore-to-camel-case: true
     call-setters-on-nulls: true #mybatis返回类型为map返回字段值为null的字段
@@ -27,7 +27,7 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 
-#logging:
-#  level:
-#    com.guihx.springcloud.mapper: debug
-#  config: classpath:logback.xml
+logging:
+  level:
+    com.guihx.springcloud.mapper: debug
+  config: classpath:logback.xml
