@@ -1,0 +1,33 @@
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: UTF-8
+    accesslog:
+      directory: /logs/accesslog/
+      enabled: true
+
+mybatis-plus:
+  configuration:
+    #控制台打印
+    #    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    #驼峰转下划线
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true #mybatis返回类型为map返回字段值为null的字段
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+spring:
+  profiles:
+    active: dev
+  application:
+    name: springcloud-provider-dept
+  datasource:
+    url: jdbc:mysql://localhost:3306/cloud-db01?serverTimezone=GMT%2B8&useUnicode=true&characterEncoding=utf-8&useSSL=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+
+#logging:
+#  level:
+#    com.guihx.springcloud.mapper: debug
+#  config: classpath:logback.xml
