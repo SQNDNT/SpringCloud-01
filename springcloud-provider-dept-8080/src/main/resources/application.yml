@@ -16,8 +16,6 @@ mybatis-plus:
   mapper-locations: classpath:mapper/*Mapper.xml
 
 spring:
-  profiles:
-    active: dev
   application:
     name: springcloud-provider-dept
   datasource:
