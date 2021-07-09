@@ -1,0 +1,15 @@
+server:
+  port: 8083
+
+#eureka配置
+eureka:
+  instance:
+    hostname: localhost #eureka服务端实例名称
+  client:
+    register-with-eureka: false #表示是否向服务端注册自己
+    fetch-registry: false #如果为false,表示为自己就是注册中心
+    service-url:  #服务的url
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+logging:
+  config: classpath:logback.xml

@@ -25,6 +25,18 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
 
+#eureka配置
+eureka:
+  client:
+    service-url:  #服务的url
+      defaultZone: http://localhost:8082/eureka/
+  instance:
+    instance-id: springcloud-provider-dept-8080
+
+info:
+  app.name: app
+  boss.name: guihx
+
 logging:
   level:
     com.guihx.springcloud.mapper: debug
