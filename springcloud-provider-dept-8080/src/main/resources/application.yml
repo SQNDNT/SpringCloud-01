@@ -29,7 +29,7 @@ spring:
 eureka:
   client:
     service-url:  #服务的url
-      defaultZone: http://localhost:8082/eureka/
+      defaultZone: http://localhost:8082/eureka/,http://localhost:8083/eureka/,http://localhost:8084/eureka/
   instance:
     instance-id: springcloud-provider-dept-8080
 

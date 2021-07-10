@@ -23,7 +23,14 @@ public class DeptConsumerController {
     @Autowired
     RestTemplate restTemplate;
 
-    private  static  String URL_PREFIX = "http://localhost:8080/";
+    /**
+     * private  static  String URL_PREFIX = "http://localhost:8080/";
+     * 用ribbon做负载均衡时此处要做成变量，否则访问的其实是同一个客户端
+     *
+     * @Author guihx
+     * @Date 2021-7-9 15:51
+     */
+    private  static  String URL_PREFIX = "http://springcloud-provider-dept/";
 
     @GetMapping("/get/{id}")
     public Dept getById(@PathVariable("id") Long id){

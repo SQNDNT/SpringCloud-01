@@ -1,4 +1,12 @@
 server:
   port: 8081
+
+#eureka配置
+eureka:
+  client:
+    register-with-eureka: false #表示是否向服务端注册自己
+    service-url:  #服务的url
+      defaultZone: http://eureka8082.com:8082/eureka/,http://eureka8083.com:8083/eureka/,http://eureka8084.com:8084/eureka/
+
 logging:
   config: classpath:logback.xml
