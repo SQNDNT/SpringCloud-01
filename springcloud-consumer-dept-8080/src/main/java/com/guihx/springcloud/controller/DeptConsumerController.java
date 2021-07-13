@@ -30,16 +30,16 @@ public class DeptConsumerController {
      * @Author guihx
      * @Date 2021-7-9 15:51
      */
-    private  static  String URL_PREFIX = "http://springcloud-provider-dept/";
+    private  static  String URL_PREFIX = "http://SPRINGCLOUD-PROVIDER-DEPT";
 
     @GetMapping("/get/{id}")
     public Dept getById(@PathVariable("id") Long id){
-        return  restTemplate.getForObject(URL_PREFIX+"cloud/dept/get/{id}", Dept.class,id);
+        return  restTemplate.getForObject(URL_PREFIX+"/cloud/dept/get/{id}", Dept.class,id);
     }
 
     @RequestMapping("/getAll")
     public List<Dept> getAll() {
-        return  restTemplate.getForObject(URL_PREFIX+"cloud/dept/getAll", List.class);
+        return  restTemplate.getForObject(URL_PREFIX+"/cloud/dept/getAll", List.class);
     }
 
     @GetMapping("/get2/{id}")
@@ -47,6 +47,6 @@ public class DeptConsumerController {
         Map<String,Object> map = new HashMap();
         map.put("id", id);
         map.put("name", name);
-        return  restTemplate.getForObject(URL_PREFIX+"cloud/dept/get2/{id}?name={name}", Dept.class,map);
+        return  restTemplate.getForObject(URL_PREFIX+"/cloud/dept/get2/{id}?name={name}", Dept.class,map);
     }
 }
