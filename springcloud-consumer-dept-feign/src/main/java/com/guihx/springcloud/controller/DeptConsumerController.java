@@ -1,4 +1,4 @@
-package springcloud.controller;
+package com.guihx.springcloud.controller;
 
 import com.guihx.springcloud.pojo.Dept;
 import com.guihx.springcloud.service.DeptClientService;

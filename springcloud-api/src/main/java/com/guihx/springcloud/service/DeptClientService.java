@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
 
 @Component
-@FeignClient(value = "SPRINGCLOUD-PROVIDER-DEPT")
+@FeignClient(value = "SPRINGCLOUD-PROVIDER-DEPT",fallbackFactory = DeptClientServiceFallBack.class)
 public interface DeptClientService {
     @GetMapping("/cloud/dept/get/{id}")
     public Dept getById(@PathVariable("id") Long id);
