@@ -34,3 +34,4 @@ build/
 /.vs
 /logs
 /history/*
+/src/test/java/*

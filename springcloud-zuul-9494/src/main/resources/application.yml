@@ -18,8 +18,8 @@ eureka:
 zuul:
   routes:
     guihxRoutes: #这里自己随便起，下面两个名字固定
-      serviceId: springcloud-provider-dept
-      path: /jkl/**
+      serviceId: springcloud-provider-dept #对应微服务名称
+      path: /jkl/** #作用是不让真实的微服务名称暴露
   ignored-services: springcloud-provider-dept #不让使用这个，要用就用我上面设定的
 
 info:
